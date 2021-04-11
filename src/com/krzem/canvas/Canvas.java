@@ -31,24 +31,6 @@ import javax.swing.JFrame;
 
 
 public class Canvas{
-	public static void main(String[] args){
-		Canvas c=new Canvas(){
-			public void update(){
-				if (this.pressed(27)){
-					this.quit();
-				}
-			}
-			public void draw(){
-				this.stroke(0);
-				this.strokeWeight(50);
-				this.line(0,0,MOUSE_X,MOUSE_Y);
-			}
-		};
-		c.run();
-	}
-
-
-
 	public static final int DISPLAY_ID=0;
 	public static final GraphicsDevice SCREEN=GraphicsEnvironment.getLocalGraphicsEnvironment().getScreenDevices()[DISPLAY_ID];
 	public static final Rectangle WINDOW_SIZE=SCREEN.getDefaultConfiguration().getBounds();
